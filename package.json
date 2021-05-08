@@ -4,7 +4,7 @@
     "description": "Portfolio website template with integrated standard blog.",
     "main": ".eleventy.js",
     "engines": {
-        "node": "14.x.x",
+        "node": "12.x.x",
         "npm": "6.x.x"
     },
     "repository": {
