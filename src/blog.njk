@@ -1,0 +1,21 @@
+---
+layout: base.layout.njk
+eleventyNavigation:
+  key: Blog
+  order: 1
+---
+{% extends "list_page.partial.njk" %}
+
+{% set isBlog = true%}
+{% set maxPosts = collections.posts.length | min(3) %}
+
+{% block header_content %}
+    Recent {% if maxPosts == 1 %}Post{% else %}Posts{% endif %}
+{% endblock %}
+
+{% block list_content %}
+    {% set posts_list = collections.posts | head(-3) %}
+    <div class="w-full my-16">
+        {% include "posts_list.partial.njk" %}
+    </div>
+{% endblock %}

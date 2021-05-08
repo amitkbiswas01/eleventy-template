@@ -1,0 +1,26 @@
+{
+    "mount": {
+        "dist": "/"
+    },
+    "plugins": [
+        "@snowpack/plugin-postcss",
+        [
+            "@snowpack/plugin-run-script",
+            {
+                "cmd": "eleventy",
+                "watch": "$1 --watch"
+            }
+        ]
+    ],
+    "packageOptions": {
+        "NODE_ENV": true
+    },
+    "buildOptions": {
+        "clean": true,
+        "out": "dist"
+    },
+    "devOptions": {
+        "hmrDelay": 300,
+        "open": "none"
+    }
+}

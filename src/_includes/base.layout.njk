@@ -1,0 +1,18 @@
+---
+layout: root.layout.njk
+---
+
+<body 
+    class="min-h-screen max-w-screen bg-gray-200 leading-normal tracking-normal flex flex-col justify-between overflow-x-hidden"
+    style="font-family: 'Noto Sans JP', sans-serif;"
+  >
+    {% include "navbar.partial.njk" %}
+    <main class="w-screen">
+        {{ content | safe }}
+    </main>
+    <footer class="w-screen mt-16 flex flex-col justify-center items-center">
+        <p class="py-4 font-semibold text-lg text-center text-gray-700"> made with ❤️ and ☕ by <a class="text-gray-900" href="" target="_blank" rel="noopener noreferrer"> Amit Biswas </a>
+        </p>
+        <script src="/assets/js/index.js"></script>
+    </footer>
+</body>

@@ -1,0 +1,7 @@
+.vscode/
+dist/
+node_modules/
+
+tailwind.output.css
+package-lock.json
+yarn.lock

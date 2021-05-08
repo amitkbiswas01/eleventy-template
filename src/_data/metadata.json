@@ -1,0 +1,22 @@
+{
+    "title": "Eleventy Template",
+    "url": "https://example.com/",
+    "description": "Portfolio website and Blog to showcase my personal projects and share knowledge with the developer community, for writing about Full-Stack JavaScript, Backend Python, micro dev-tips and all things Software Engineering",
+    "small_desc": "Human because I have to, Software Engineer because I choose to!",
+    "keywords": "HTML5, CSS3, JavaScript, JS6, 11ty, Portfolio, Static Site Generator",
+    "feed": {
+        "subtitle": "Portfolio website and Blog to showcase my personal projects and share knowledge with the developer community",
+        "filename": "feed.xml",
+        "path": "/feed/feed.xml",
+        "id": "https://example.com/"
+    },
+    "jsonfeed": {
+        "path": "/feed/feed.json",
+        "url": "https://example.com/feed/feed.json"
+    },
+    "author": {
+        "name": "Amit Biswas",
+        "email": "amitkbiswas01@gmail.com",
+        "url": "https://github.com/amitkbiswas01/"
+    }
+}

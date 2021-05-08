@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {# meta tags #}
+        <meta charset="utf-8"/>
+        <title>{{ title or metadata.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="{{ description or metadata.description }}">
+        <meta name="keywords" content="{{ metadata.keywords }}"/>
+        <meta name="author" content="{{ metadata.author.name }}"/>
+
+        {# open graph tags #}
+        <meta property="og:title" content="{{ title or metadata.title }}"/>
+        <meta property="og:description" content="{{ desc or metadata.small_desc }}"/>
+
+        <meta property="og:image" content="{{ metadata.url }}public/cover.jpg"/>
+        <meta property="og:image:type" content="image/jpeg"/>
+        <meta property="og:image:width" content="400"/>
+        <meta property="og:image:height" content="300"/>
+        <meta property="og:image:alt" content="Guy with a computer!"/>
+        <meta property="og:url" content="{{ metadata.url }}"/>
+
+        {# twitter tags #}
+        <meta name="twitter:title" content="{{ title or metadata.title }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@username">
+        <meta name="twitter:description" content="{{ desc or metadata.small_desc }}">
+        <meta name="twitter:image" content="{{ metadata.url }}public/cover.jpg">
+        <meta name="twitter:creator" content="@username">
+
+        {# icons #}
+        <link rel="apple-touch-icon" sizes="180x180" href="{{'/public/apple-touch-icon.png' | url}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{'/public/favicon-32x32.png' | url}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{'/public/favicon-16x16.png' | url}}">
+        <link rel="mask-icon" href="{{'/public/safari-pinned-tab.svg' | url}}" color="#da532c">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#000000">
+
+        {# human txt file #}
+        <link rel="author" href="static/humans.txt"/>
+
+        {# feed #}
+        <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+        <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+        {# styles #}
+        <link rel="stylesheet" href="{{ '/assets/css/tailwind.output.css' | url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/prism-okaidia.css' | url }}">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+        {# add Global site tag (gtag.js) - Google Analytics only in production#}
+        {% if process.env.ELEVENTY_ENV === "prod" %}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NVQ9HEM8G"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'G-9NVQ9HEM8G');
+            </script>
+        {% endif %}
+    </head>
+    {{content|safe}}
+</html>

@@ -1,0 +1,25 @@
+---
+layout: base.layout.njk
+eleventyNavigation:
+  key: Post Archive
+  order: 3
+pagination:
+  data: collections.posts
+  size: 4
+  reverse: true
+  alias: posts
+---
+
+{% extends "list_page.partial.njk" %}
+
+{% block header_content %}
+    All Posts
+{% endblock %}
+
+{% block list_content %}
+  {% set posts_list = pagination.items %}
+  <div class="w-full my-16">
+    {% include "posts_list.partial.njk" %}
+  </div>
+  {% include "paginator.partial.njk" %}
+{% endblock %}

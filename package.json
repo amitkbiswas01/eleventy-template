@@ -1,0 +1,68 @@
+{
+    "name": "eleventy-template",
+    "version": "1.0.0",
+    "description": "Portfolio website template with integrated standard blog.",
+    "main": ".eleventy.js",
+    "engines": {
+        "node": "14.x.x",
+        "npm": "6.x.x"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "keywords": [
+        "eleventy",
+        "snowpack",
+        "tailwindcss",
+        "postcss",
+        "portfolio",
+        "blog"
+    ],
+    "author": "Amit Biswas <amitkbiswas01@gmail.com>",
+    "license": "GPL-3.0-or-later",
+    "private": true,
+    "homepage": "",
+    "browserslist": [
+        "defaults",
+        "maintained node versions",
+        "> 5%"
+    ],
+    "scripts": {
+        "clean": "rimraf dist",
+        "serve:tailwind": "postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
+        "prestart": "yarn run clean && yarn run serve:tailwind",
+        "dev": "yarn run prestart && ELEVENTY_ENV=dev npx eleventy --serve",
+        "serve": "snowpack dev",
+        "build:tailwind": "NODE_ENV=production postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
+        "prebuild": "yarn run clean && yarn run build:tailwind",
+        "build": "snowpack build",
+        "debug": "DEBUG=* npx eleventy",
+        "prettier": "npx prettier --write '.'"
+    },
+    "devDependencies": {
+        "@11ty/eleventy": "^0.12.1",
+        "@11ty/eleventy-navigation": "^0.2.0",
+        "@11ty/eleventy-plugin-rss": "^1.1.0",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
+        "@snowpack/plugin-build-script": "^2.1.0",
+        "@snowpack/plugin-optimize": "^0.2.13",
+        "@snowpack/plugin-postcss": "^1.1.0",
+        "@snowpack/plugin-run-script": "^2.3.0",
+        "@snowpack/plugin-webpack": "^2.3.0",
+        "@tailwindcss/typography": "^0.4.0",
+        "autoprefixer": "^10.2.4",
+        "cssnano": "^5.0.2",
+        "dayjs": "^1.10.4",
+        "eleventy-plugin-lazyimages": "^2.1.0",
+        "eleventy-plugin-youtube-embed": "^1.5.0",
+        "html-minifier": "^4.0.0",
+        "markdown-it": "^12.0.4",
+        "markdown-it-anchor": "^7.1.0",
+        "postcss": "^8.2.6",
+        "postcss-cli": "^8.3.1",
+        "rimraf": "^3.0.2",
+        "snowpack": "^3.3.7",
+        "tailwindcss": "^2.1.2"
+    }
+}

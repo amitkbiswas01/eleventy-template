@@ -1,0 +1,22 @@
+[
+    {
+        "url": "https://github.com/username",
+        "icon": "/assets/img/github.png",
+        "alt": "Github"
+    },
+    {
+        "url": "https://www.linkedin.com/in/username/",
+        "icon": "/assets/img/linkedin.png",
+        "alt": "Linkedin"
+    },
+    {
+        "url": "https://twitter.com/username",
+        "icon": "/assets/img/twot.png",
+        "alt": "Twitter"
+    },
+    {
+        "url": "mailto:username@gmail.com?subject=Update the Subject",
+        "icon": "/assets/img/mail.png",
+        "alt": "Email"
+    }
+]

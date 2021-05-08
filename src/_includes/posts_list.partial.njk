@@ -1,0 +1,43 @@
+<ol reversed>
+  {% for post in posts_list | reverse %}
+    <li class="px-4 mb-8 {% if isBlog %}py-2 mb-12{% endif %} flex flex-col items-start">
+      <div>
+        <a href="{{ post.url | url }}" class="font-semibold text-2xl md:text-3xl">
+          {% if post.data.title %}{{ post.data.title }}
+          {% else %}
+            <code>{{ post.url }}</code>
+          {% endif %}
+        </a>
+      </div>
+      <time 
+        class="text-sm md:text-base font-medium text-gray-700" 
+        datetime="{{ post.date | htmlDateString }}"
+      >
+        {{ post.date | readableDate }}
+      </time>
+      {% if isBlog %}
+        <div class="w-full my-4">
+          {{ post.data.post_excerpt | md  | safe }}
+          <div class="w-full pr-4 flex justify-end">
+            <a 
+              class="text-gray-900 text-md md:text-lg font-semibold underline hover:font-bold" 
+              href="{{ post.url }}"
+            > read more </a>
+          </div>
+        {% endif %}
+        <div class="mt-4 flex flex-wrap">
+          {% for tag in post.data.tags %}
+            {% if collections
+              .tagList
+              .indexOf(tag) !== -1 %}
+              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              <a 
+              href="{{ tagUrl | url }}" 
+              class="mr-4 mb-4 p-2 font-semibold text-gray-900 bg-gray-200 hover:bg-gray-900 hover:text-gray-300 underline rounded-md"
+          ># {{ tag }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>

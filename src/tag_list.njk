@@ -1,0 +1,26 @@
+---
+permalink: /tags/
+layout: base.layout.njk
+eleventyNavigation:
+  key: Tags
+  order: 2
+---
+{% extends "list_page.partial.njk" %}
+
+{% block header_content %}
+    Tags
+{% endblock %}
+
+{% block list_content %}
+    {% set posts_list = collections[tag] %}
+    <div class="w-full my-16 flex flex-wrap">
+        {% for tag in collections.tagList %}
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <a 
+                href="{{ tagUrl | url }}" 
+                class="mr-4 mb-4 p-2 font-semibold text-gray-900 bg-gray-300 hover:bg-gray-900 hover:text-gray-300 underline rounded-md"
+            >#{{ tag }}</a>
+        {% endfor %}
+        {% include "posts_list.partial.njk" %}
+    </div>
+{% endblock %}
