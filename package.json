@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/amitkbiswas01/eleventy-template"
     },
     "keywords": [
         "eleventy",
@@ -31,11 +31,11 @@
     "scripts": {
         "clean": "rimraf dist",
         "serve:tailwind": "postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
-        "prestart": "yarn run clean && yarn run serve:tailwind",
-        "dev": "yarn run prestart && ELEVENTY_ENV=dev npx eleventy --serve",
+        "prestart": "npm run clean && npm run serve:tailwind",
+        "dev": "npm run prestart && ELEVENTY_ENV=dev npx eleventy --serve",
         "serve": "snowpack dev",
         "build:tailwind": "NODE_ENV=production postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
-        "prebuild": "yarn run clean && yarn run build:tailwind",
+        "prebuild": "npm run clean && npm run build:tailwind",
         "build": "snowpack build",
         "debug": "DEBUG=* npx eleventy",
         "prettier": "npx prettier --write '.'"
