@@ -12,7 +12,7 @@
             }
         ]
     ],
-    "installOptions": {
+    "packageOptions": {
         "NODE_ENV": true
     },
     "buildOptions": {

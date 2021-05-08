@@ -30,7 +30,7 @@ function typeWriterFunc() {
     const elem = document.getElementById("text-elem");
 
     const phrases = [
-        "Software Engineering Intern",
+        "Software Engineer",
         "Tech-Enthusiast",
         "Self-Proclaimed Burgerholic",
     ];

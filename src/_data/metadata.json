@@ -1,7 +1,7 @@
 {
     "title": "Eleventy Template",
     "url": "https://example.com/",
-    "description": "Portfolio website and Blog to showcase my personal projects and share knowledge with the developer community, for writing about Full-Stack JavaScript, Backend Python, micro dev-tips and all things Software Engineering",
+    "description": "Etiam at luctus velit. Proin rhoncus dui sit amet libero viverra vehicula. Sed consequat, tortor et viverra sollicitudin, odio purus gravida metus, in varius risus libero gravida nunc. Duis rutrum et massa pulvinar congue. Duis vitae velit convallis, suscipit tellus condimentum, imperdiet arcu. Phasellus non molestie ante, in finibus magna. Donec quis ornare justo, vitae molestie enim.",
     "small_desc": "Human because I have to, Software Engineer because I choose to!",
     "keywords": "HTML5, CSS3, JavaScript, JS6, 11ty, Portfolio, Static Site Generator",
     "feed": {
