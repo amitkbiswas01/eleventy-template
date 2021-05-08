@@ -14,6 +14,10 @@ A minimalist Portfolio and Blog template made with [11ty](https://www.11ty.dev/)
 -   RSS Feed
 -   Sitemap
 
+## Lighthouse Score
+
+![score](src/assets/img/perf.png)
+
 ## How to use?
 
 -   **To run locally** in dev environment,
@@ -30,7 +34,7 @@ npm run serve
 -   **Other commands** include,
     -   `npm run prettier` : for prettier formatting
     -   `npm run clean` : for removing `dist` folder
-    -   `npm run debug` ; for debugging
+    -   `npm run debug` : for debugging
 
 ## Attributes
 
