@@ -29,7 +29,6 @@
         "serve:tailwind": "postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
         "prestart": "yarn run clean && yarn run serve:tailwind",
         "dev": "yarn run prestart && ELEVENTY_ENV=dev npx eleventy --serve",
-        "serve": "snowpack dev",
         "build:tailwind": "NODE_ENV=production postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
         "prebuild": "yarn run clean && yarn run build:tailwind",
         "build": "snowpack build",

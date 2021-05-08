@@ -1,5 +1,19 @@
 # Eleventy Template
 
+A minimalist Portfolio and Blog template made with [11ty](https://www.11ty.dev/), [tailwindcss](https://tailwindcss.com/) and [Snowpack](https://www.snowpack.dev/). Some features of this template are,
+
+-   Blog post generation from markdown files.
+-   Posts have,
+    -   Tags
+    -   Time of publication
+    -   Read time
+    -   Embedded Images and Videos
+-   Pagination
+-   HTML and CSS Minification and Purge
+-   Lazy-loading Images
+-   RSS Feed
+-   Sitemap
+
 ## How to use?
 
 -   **To run locally** in dev environment,
@@ -20,4 +34,4 @@ yarn run serve
 
 ## Attributes
 
-[About Page by pikisuperstar](https://www.freepik.com/vectors/technology)
+[About Page Photo by pikisuperstar](https://www.freepik.com/vectors/technology)
